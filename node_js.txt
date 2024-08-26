@@ -1,0 +1,123 @@
+
+js is datatype less programming
+js is case sensitive
+js is loosely typed language
+
+
+1 hoisiting
+2 clousers
+3 scope
+4 this keyword
+5 call stack vs main stack
+6 event loop
+ 7 promise
+ 8 async await
+ 9 arraw function
+
+
+ let var const :  lifetime of any variable, scope
+
+ scope
+ hoisiting
+ mutabiltity = changes are allowed
+ immutability = changes not allowed
+
+
+
+var : function scoped
+
+ let and const : block scope
+
+ block {}  is-else loops
+
+
+
+
+ hoisiting
+ first use the declare
+
+
+ console.log(a);
+ var a;
+
+
+reassignment redeclaration
+
+var a=10;
+console.log(a);
+
+var a=5;
+console.log(a);
+
+
+in let redeclare not allow
+
+
+
+
+
+
+clousers
+
+function outer(){
+     let a =5;
+     function inner(){
+          console.log(a);
+     }
+     inner();
+}
+outer();
+
+
+
+hoisiting is not allow in arrow function
+it allow in name function
+
+
+a();
+var a =() =>{
+     console.log("hello");
+
+};    // it not allow
+
+a();
+function a(){
+     console.log("hello");
+} // it allow
+
+
+
+
+callback-- if u have function and want to do overloading 
+
+const calculator = (a,b,operation)=>{
+     return operation(a,b);
+}
+const sum =(a,b) =>{
+     return a+b;
+
+};
+const sub=(a,b) =>{
+     return a-b;
+
+};
+console.log(calculator(3,5,sum));
+
+
+******************************************
+
+const calculator = (a,b,operation)=>{
+     return operation(a,b);
+}
+
+console.log(
+     calculator(3,5,(a,b)=>{
+          return a+b;
+     })
+     );
+
+     console.log(
+     calculator(3,5,(a,b)=>{
+          return a-b;
+     })
+     );
